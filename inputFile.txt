@@ -1,0 +1,39 @@
+.global a
+.extern c
+.equ f, s+5
+#lokalni
+
+.section .sekcija1
+
+andw n(%r7), n(%r7)
+
+jmp *10
+call 10
+jgt *%r1
+jgt *(%r1)
+
+mov a, $10
+.skip 1
+s: .byte -3, 24, a
+  
+  andw c, n(%r7)
+  mov $c, n(%r7)
+a: int *l(%r7)
+  pop p 
+  orb 10, %r2h
+p:
+ .word c, s, a  
+ labela:
+  
+
+.section .sekcija2
+andw p(%r7), p(%r7)
+  push c
+  .skip 2
+n: call *s
+  divb $20, %r1l
+l: subw n, f(%r3)
+   shr (%r4), n
+  test s(%r7), 20
+ halt
+.end

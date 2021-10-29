@@ -1,0 +1,30 @@
+.global a
+.extern c
+
+.equ b, a
+.equ d, b+10
+
+.section .text
+
+    mov $.sekcija1, s(%r7)
+    .word b
+    orb $s, k(%r7)
+
+    .word .sekcija1
+    jmp a
+    jeq *%r5
+    call *(%r10)
+a: .skip 5
+    jmp *10(%r7)
+    jmp *c(%r7)
+f:  mov c(%r7), f
+
+.section .sekcija1
+
+    mov $10, $a
+    not %r10, 10
+    movb $c, (%r10)
+s: .word a, 10, b
+    shr f(%r7), 10
+k:
+.end

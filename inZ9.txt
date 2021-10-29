@@ -1,0 +1,21 @@
+.global a, c
+.extern b
+.text
+	jne	a
+	jne	e
+	jne b
+	jne	d
+d: 	.word	  d
+	mov 	(%r5), b
+	mov	c, (%r5)
+	mov	(%r5), e
+.data
+.skip 	8
+e:	.word	5, a
+	.word	c
+    .word	.bss 
+a:	.word	b
+.bss
+c:	.skip 	8
+	
+.end

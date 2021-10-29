@@ -1,0 +1,35 @@
+.global a
+.equ b, a-11 
+#konstanta
+.equ d, b+a 
+#globalni
+
+.section .sekcija1
+
+   jmp *f(%r7)
+   jmp *a(%r7)
+   jmp *c(%r5)
+.text
+   jeq f
+ g:   jmp *%r3
+   shr f(%r7), 10
+   movb a, 10
+   movb $a, 10
+   movb $c, (%r10)
+
+   jmp  4
+c: .skip 2
+   jne *b(%r7)
+
+a: jmp *d
+
+.section .sekcija2
+
+    jeq *f(%r7)
+    .byte 4, .sekcija1
+   .word d, a
+f: jmp *7(%r3) 
+    .skip 4
+     jeq *f(%r7)
+    jmp d
+.end

@@ -1,0 +1,51 @@
+Tabela simbola:
+ime: UND sekcija: 0              
+ime: .text|   sekcija: 5|   vrednost: 0|   fleg: rwxp|   id: 5|   size: 44
+ime: .sekcija1|   sekcija: 6|   vrednost: 0|   fleg: sekcija|   id: 6|   size: 29
+ime: a|   sekcija: 5|   vrednost: 24|   fleg: simbol|   id: 1|   global/local g
+ime: c|   sekcija: 0|   vrednost: 0|   fleg: simbol|   id: 2|   global/local g
+ime: b|   sekcija: 0|   vrednost: 24|   fleg: simbol|   id: 3|   global/local l
+ime: d|   sekcija: 0|   vrednost: 34|   fleg: simbol|   id: 4|   global/local l
+ime: s|   sekcija: 6|   vrednost: 16|   fleg: simbol|   id: 7|   global/local l
+ime: k|   sekcija: 6|   vrednost: 29|   fleg: simbol|   id: 8|   global/local l
+ime: f|   sekcija: 5|   vrednost: 37|   fleg: simbol|   id: 9|   global/local l
+
+code .text
+64 00 00 00 6E 0E 00 
+18 00 
+A0 00 10 6E 1B 
+00 00 
+2C 00 00 00 
+34 2A 
+24 54 
+00 00 00 00 00 
+2C 6E 08 00 
+2C 6E FE FF 
+64 6E FB FF 80 25 00 
+
+code .sekcija1
+64 00 0A 00 00 18 00 
+94 1A 80 0A 00 
+60 00 00 54 
+00 00 
+0A 00 
+18 00 
+C4 6E 20 00 80 0A 00 
+
+rel. .text
+2 R_386_32 6
+5 R_386_PC32 6
+11 R_386_32 6
+13 R_386_PC32 6
+14 R_386_32 6
+18 R_386_32 1
+35 R_386_PC32 2
+39 R_386_PC32 2
+42 R_386_32 5
+
+rel. .sekcija1
+5 R_386_32 1
+14 R_386_32 2
+16 R_386_32 1
+24 R_386_PC32 5
+
